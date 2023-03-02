@@ -1,16 +1,63 @@
+:root {
+    --neon: #65c2f1;
+    --bdrcolor: #fff;
+    --bgcolor: #4e4c4c;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3em;
+    padding: 1em;
+    background-color: var(--bgcolor);
+}
+
 header {
     display: flex;
     flex-flow: column wrap;
+    align-items: center;
+    color: white;
+}
+header h1 {
+    color: var(--neon);
 }
 
 main {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    gap: 3em;
 }
+
 section {
+    flex: 1 1 35em;
     display: flex;
     flex-flow: column wrap;
+    align-items: center;
+    color: var(--neon);
+    border: 0.2em dashed var(--bdrcolor);
 }
+section > * {
+    max-width: 80%;
+}
+section h2 {
+    position: relative;
+    top: -2em;
+    z-index: 0;
+    border: 0.1em solid var(--bdrcolor);
+    border-radius: 0.5em;
+    padding: 0.5em;
+    background-color: var(--bgcolor);
+}
+section p, pre {
+    position: relative;
+    top: -5em;
+}
+section pre {
+    tab-size: 1;
+}
+
 footer {
     display: flex;
+    justify-content: center;
+    color: var(--neon);
 }
