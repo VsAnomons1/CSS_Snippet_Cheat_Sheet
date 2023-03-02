@@ -32,7 +32,7 @@ main {
 }
 
 section {
-    flex: 1 1 35em;
+    flex: 1 1 26em;
     display: flex;
     flex-flow: column wrap;
     align-items: stretch;
@@ -47,23 +47,17 @@ section:hover, section:hover > h2 {
 
 section > * {
     max-width: 80%;
+    position: relative;
+    top: -2em;
+    left: 0.5em;
 }
 
 section h2 {
-    position: relative;
-    top: -2em;
-    left: 1em;
     z-index: 0;
     border: 0.1em solid var(--bdrcolor);
     border-radius: 0.5em;
     padding: 0.5em;
     background-color: var(--bgcolor);
-}
-
-section p, pre {
-    position: relative;
-    top: -5em;
-    left: 3em;
 }
 
 section pre {
@@ -73,7 +67,7 @@ section pre {
     border-radius: 0.5em;
     color: white;
     user-select: all;
-    
+    white-space: pre-wrap;
 }
 
 section pre code::selection {
@@ -84,4 +78,28 @@ footer {
     display: flex;
     justify-content: center;
     color: var(--darkneon);
+}
+
+@media screen and (width <= 1411px ) {
+    section {
+        flex-basis: 21em;
+    }
+}
+
+@media screen and (width <= 1170px) {
+    section {
+        flex-basis: 17em;
+    }
+}
+
+@media screen and (width <= 992px) {
+    section {
+        flex-basis: 20em;
+    }
+}
+
+@media screen and (width <= 768px) {
+    section {
+        flex-basis: 21em;
+    }
 }
