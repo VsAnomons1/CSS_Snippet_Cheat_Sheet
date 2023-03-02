@@ -1,8 +1,10 @@
 :root {
-    --neon: #65c2f1;
+    --darkneon: #65c2f1;
+    --lightneon: #65c2f159;
     --bdrcolor: #fff;
     --bgcolor: #4e4c4c;
 }
+
 body {
     display: flex;
     flex-direction: column;
@@ -17,8 +19,9 @@ header {
     align-items: center;
     color: white;
 }
+
 header h1 {
-    color: var(--neon);
+    color: var(--darkneon);
 }
 
 main {
@@ -32,32 +35,53 @@ section {
     flex: 1 1 35em;
     display: flex;
     flex-flow: column wrap;
-    align-items: center;
-    color: var(--neon);
+    align-items: stretch;
+    color: var(--darkneon);
     border: 0.2em dashed var(--bdrcolor);
 }
+
+section:hover, section:hover > h2 {
+    box-shadow: 0 0 0.5em 0.3em var(--darkneon);
+    transition: all ease-in-out 0.5s;
+}
+
 section > * {
     max-width: 80%;
 }
+
 section h2 {
     position: relative;
     top: -2em;
+    left: 1em;
     z-index: 0;
     border: 0.1em solid var(--bdrcolor);
     border-radius: 0.5em;
     padding: 0.5em;
     background-color: var(--bgcolor);
 }
+
 section p, pre {
     position: relative;
     top: -5em;
+    left: 3em;
 }
+
 section pre {
-    tab-size: 1;
+    font-size: 1.2em;
+    padding: 0.5em;
+    background: repeating-linear-gradient(var(--darkneon), var(--lightneon));
+    border-radius: 0.5em;
+    color: white;
+    user-select: all;
+    
+}
+
+section pre code::selection {
+    background-color:cornflowerblue;
 }
 
 footer {
     display: flex;
     justify-content: center;
-    color: var(--neon);
+    color: var(--darkneon);
 }
