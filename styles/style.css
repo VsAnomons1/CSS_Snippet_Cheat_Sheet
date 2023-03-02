@@ -1,0 +1,16 @@
+header {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+section {
+    display: flex;
+    flex-flow: column wrap;
+}
+footer {
+    display: flex;
+}
